@@ -43,5 +43,5 @@ targets:
       # We only have a single deployment copy for production, so we use a shared path.
       root_path: /Shared/.bundle/prod/${bundle.name}
     # default service principal to use for all jobs in this environment
-    #run_as:
-    #  service_principal_name: <provide-service-principal-name>
+    run_as:
+      user_name: marcin.wojtyczka@databricks.com
