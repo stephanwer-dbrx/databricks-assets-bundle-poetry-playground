@@ -1,0 +1,6 @@
+With databricks connect, spark cannot be started in local mode.
+
+There are a couple of options for running unit and integration tests:
+1. Run unit and integration tests using databricks connect. This requires a cluster in Databricks workspace.
+2. Run unit tests using spark local and integration tests using Databricks job (e.g. created using sdk).
+3. Have different virtual environments for unit (no databricks-connect installed) and integration tests (databricks-connect installed).

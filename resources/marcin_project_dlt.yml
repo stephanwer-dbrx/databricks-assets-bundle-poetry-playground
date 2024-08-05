@@ -1,0 +1,23 @@
+# The main pipeline for marcin_project
+resources:
+  pipelines:
+    marcin_project_dlt:
+      name: marcin_project_dlt_${bundle.target}
+      target: marcin_project_${bundle.environment}
+      clusters:
+      - label: default
+        autoscale:
+          min_workers: 1
+          max_workers: 5
+          mode: ENHANCED
+        policy_id: E06216CAA0000360
+      - label: maintenance
+        policy_id: E06216CAA0000360
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+      configuration:
+        bundle.sourcePath: /Workspace/${workspace.file_path}/src
+      # overwrite the default run_as from the bundle
+      #run_as:
+      #  service_principal_name: 5a0e4887-c924-4646-9eda-ff8eb38924f3
