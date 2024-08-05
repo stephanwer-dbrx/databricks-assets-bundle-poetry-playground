@@ -1,4 +1,4 @@
-# this test uses Databricks Connect
+# This is an example of an integration tests that leverages Databricks Connect
 
 from databricks.connect import DatabricksSession
 from marcin_project import main
@@ -7,11 +7,12 @@ from marcin_project import main
 # check that you have configured Databricks Connect correctly.
 # See https://docs.databricks.com/dev-tools/databricks-connect.html
 
-# Take connection from .databrikcscfg file, DEFAULT profile
+# For the test to work the provided cluster must be in running state.
+
+# This will take auth details from the DEFAULT profile from .databrikcscfg file:
 # https://docs.databricks.com/dev-tools/databricks-connect-ref.html#requirements
 spark = DatabricksSession.builder.getOrCreate()
-# provide profile optionally: .profile("profile_name")
-# or config via sdkConfig(config) with various auth option
+# To change auth config use .sdkConfig(config)
 
 # Build explicitly
 # spark = DatabricksSession.builder.remote(

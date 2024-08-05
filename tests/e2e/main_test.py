@@ -1,10 +1,10 @@
-# This end-to-end test run the deployed job and verifies the output
+# This is an example of an end-to-end test that runs the deployed job and verifies the output
+# Before running the test execute: databricks bundle deploy --target qa
 
 from databricks.sdk import WorkspaceClient
 from databricks.sdk.service.compute import Language
 from databricks.sdk.core import Config
 
-# needs to run before: databricks bundle deploy --target qa
 def test_main():
     w = WorkspaceClient()  # use DEFAULT profile
     config = Config()
