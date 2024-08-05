@@ -6,13 +6,13 @@ from marcin_project import main
 # This will create a new Databricks Connect session. If this fails,
 # check that you have configured Databricks Connect correctly.
 # See https://docs.databricks.com/dev-tools/databricks-connect.html
-
+# Check limitations: https://docs.databricks.com/en/dev-tools/databricks-connect-legacy.html#limitations
 # For the test to work the provided cluster must be in running state.
 
 # This will take auth details from the DEFAULT profile from .databrikcscfg file:
 # https://docs.databricks.com/dev-tools/databricks-connect-ref.html#requirements
 spark = DatabricksSession.builder.getOrCreate()
-# To change auth config use .sdkConfig(config)
+# You can also provide auth credentials using .sdkConfig(config)
 
 # Build explicitly
 # spark = DatabricksSession.builder.remote(

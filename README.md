@@ -13,7 +13,7 @@ In this project python dependencies are managed by poetry.
 
 ### CI/CD setup
 
-You can find the Github actions workflow under: `.github/workflows/ci-cd.yaml`
+You can find the Github actions workflow under: [.github/workflows/ci-cd.yaml](.github/workflows/ci-cd.yaml)
 
 ### Deployment using assets bundle
 
