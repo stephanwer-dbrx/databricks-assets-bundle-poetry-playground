@@ -45,3 +45,4 @@ targets:
     # default service principal to use for all jobs in this environment
     run_as:
       user_name: marcin.wojtyczka@databricks.com
+      #service_principal_name: "69511ed2-zb27-444c-9863-4bc8ff497637"
