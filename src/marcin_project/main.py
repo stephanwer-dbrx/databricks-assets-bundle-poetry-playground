@@ -7,7 +7,7 @@ def get_taxis(spark: SparkSession):
 
 def main():
   spark = SparkSession.builder.getOrCreate()
-  get_taxis(spark).show(5)
+  get_taxis(spark).show(10)
 
 
 if __name__ == '__main__':
